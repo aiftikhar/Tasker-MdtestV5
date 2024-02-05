@@ -2,7 +2,7 @@
 
 if [ -n $TERMUX_VERSION ]; then
     apt update
-    yes | pkg install -y git golang ffmpeg termux-elf-cleaner p7zip 2>/dev/null | grep -E '(Need to get |Get:|Unpacking |Setting up )'
+    yes | pkg install -y git golang ffmpeg termux-elf-cleaner p7zip jq 2>/dev/null | grep -E '(Need to get |Get:|Unpacking |Setting up )'
 else
     echo "The script should run on Termux"
     exit 1
