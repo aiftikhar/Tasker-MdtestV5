@@ -10,7 +10,7 @@ if [[ "$1" != "ffmpeg" ]]; then
     yes | pkg upgrade -y
 fi
 
-yes | pkg install -y p7zip ldd file tur-repo root-repo x11-repo
+yes | pkg install -y p7zip jq ldd file tur-repo root-repo x11-repo
 
 mkdir -p "build" &>/dev/null
 cd build
