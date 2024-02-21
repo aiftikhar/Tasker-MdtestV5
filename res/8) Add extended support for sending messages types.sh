@@ -967,6 +967,22 @@ code_body='
 		} else {
 			log.Infof("Blocklist updated: %+v", resp)
 		}
+	case "senddetailed":
+		if len(args) < 2 {
+			log.Errorf("Usage: send <jid> <text>")
+			return
+		}
+		recipient, ok := parseJID(args[0])
+		if !ok {
+			return
+		}
+		msg := &waProto.Message{Conversation: proto.String(strings.Join(args[1:], " "))}
+		resp, err := cli.SendMessage(context.Background(), recipient, msg)
+		if err != nil {
+			log.Errorf("Error sending message: %v", err)
+		} else {
+			log.Infof("Message sent (server timestamp: %s, messageID: %s)", resp.Timestamp)
+		}		
 	}
 }
 	//stop
