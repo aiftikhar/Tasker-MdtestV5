@@ -15,9 +15,9 @@ cd $tmpdir
 
 git clone https://github.com/tulir/whatsmeow
 
-if [ -n $TERM ]; then
-    clear
-fi
+#if [ -n $TERM ]; then
+#    clear
+#fi
 
 # Add extended support
 echo -e "\n------------------------\n\nAdding extended support:-\n"
