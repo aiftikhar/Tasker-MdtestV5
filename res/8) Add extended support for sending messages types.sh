@@ -967,7 +967,7 @@ code_body='
 		} else {
 			log.Infof("Blocklist updated: %+v", resp)
 		}
-	case "senddetailed":
+	case "sendid":
 		if len(args) < 2 {
 			log.Errorf("Usage: send <jid> <text>")
 			return
@@ -981,7 +981,7 @@ code_body='
 		if err != nil {
 			log.Errorf("Error sending message: %v", err)
 		} else {
-			log.Infof("Message sent (server timestamp: %s, messageID: %s)", resp.Timestamp)
+			log.Infof("Message sent (server timestamp: %s, message ID: %s)", resp.Timestamp, resp.ID)
 		}		
 	}
 }
