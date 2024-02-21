@@ -17,7 +17,7 @@ code_body='
 	version, _ := store.ParseVersion(fmt.Sprintf("%s", store.GetWAVersion()))
 	//store.SetOSInfo("Mdtest (V5)(" + fmt.Sprintf("%d", *httpPort) + ")", version)
  	store.SetOSInfo("Firefox (Android)", version)
-	args := flag.Args()
+	//args := flag.Args()
 	//stop
 '
 
