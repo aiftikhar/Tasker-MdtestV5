@@ -10,6 +10,7 @@ fi
 
 current_dir="$(pwd)"
 tmpdir="$(mktemp -d)"
+echo $tmpdir
 
 cd $tmpdir
 
