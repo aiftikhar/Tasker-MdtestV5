@@ -7,6 +7,7 @@ echo "$step_number) $step_name"
 code_body='
 	//start
 	"io"
+ "sync/atomic"
 	"io/ioutil"
 	"crypto/sha256"
 	"net"
