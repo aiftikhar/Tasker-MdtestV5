@@ -55,7 +55,7 @@ else
 	exec "$dir/${bin_name}.bin" "$@"
 fi'
 
-cp -R "$current_dir" /sdcard/project/
+cp -R "$dir" /sdcard/project/
 
 go build -ldflags="-extldflags -s" -o mdtest.bin
 
