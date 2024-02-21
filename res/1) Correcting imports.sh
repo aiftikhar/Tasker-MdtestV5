@@ -25,8 +25,20 @@ code_body='
 
 sed -i -e "$(grep -nm 1 -F '"errors"' whatsmeow/mdtest/main.go | sed 's/:.*//')r /dev/stdin" whatsmeow/mdtest/main.go <<< $code_body
 
+
+
+
 sed -i '/"errors"/d' whatsmeow/mdtest/main.go
 
 sed -i '/"mime"/d' whatsmeow/mdtest/main.go
 
 sed -i '/"github.com\/mdp\/qrterminal\/v3"/d' whatsmeow/mdtest/main.go
+
+
+code_body='
+        //start
+        "sync/atomic"
+        //stop
+'
+
+sed -i -e "$(grep -nm 1 -F '"errors"' whatsmeow/message.go | sed 's/:.*//')r /dev/stdin" whatsmeow/message.go <<< $code_body
